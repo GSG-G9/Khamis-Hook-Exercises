@@ -1,13 +1,19 @@
-import React, {useState} from 'react';
-
+import React, { useState } from "react";
 
 function Two() {
-    return (
-      <>
-       <h1>Two</h1>
-      </>
-    );
+  const [color, setColor] = useState('#42f598');
+  const colors = [ "red", "green","blue"];
+  const handleColor = (e) => {
+    setColor(e.target.value);
   }
-  
-  export default Two;
-  
+
+  return (
+    <div style={{backgroundColor: color}} className="color">
+      {colors.map((c)=>
+        <button value={c} onClick={handleColor}>{c}</button>
+      )}
+    </div>
+  );
+}
+
+export default Two;
