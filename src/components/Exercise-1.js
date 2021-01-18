@@ -4,15 +4,15 @@ function One() {
   const [Count, setCount] = useState(0);
 
   const Increment = () => {
-    setCount(v => v + 1);
+    setCount(Count + 1);
   };
 
   const Reset = () => {
-    setCount(v => 0);
+    setCount(0);
   };
 
   const Decrement = () => {
-    setCount(v => v - 1);
+    setCount(Count - 1);
   };
 
   return (
